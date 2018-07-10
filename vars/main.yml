@@ -1,0 +1,15 @@
+nxos_provider:
+  username: "{{ ansible_user }}"
+  transport: nxapi
+  use_ssl: yes
+  validate_certs: no
+  timeout: 60
+  host: "{{ inventory_hostname }}"
+
+nxos_cli:
+  username: "{{ ansible_user }}"
+#  password: "{{ pwd }}"
+  transport: cli
+  timeout: 60
+  host: "{{ inventory_hostname }}"
+
